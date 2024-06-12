@@ -1,0 +1,5 @@
+@media (max-width: 640px) {
+  .promo-svg {
+    transform: matrix(0.7, 0, 0, 0.7, 0, 0);
+  }
+}

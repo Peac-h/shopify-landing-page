@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Shopify Sans";
+  src: url(../fonts/shopify-sans/ShopifySans--bold.woff2);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Shopify Sans";
+  src: url(../fonts/shopify-sans/ShopifySans--regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+}

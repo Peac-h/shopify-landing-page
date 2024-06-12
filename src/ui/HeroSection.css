@@ -1,0 +1,10 @@
+.bg-hero {
+  background-image: linear-gradient(0deg, #f1fff9, rgba(241, 255, 249, 0) 30%),
+    radial-gradient(circle at 0 0, #5fd5b6 0, rgba(95, 213, 182, 0) 30%),
+    linear-gradient(
+      180deg,
+      rgba(121, 223, 255, 0.7) -10%,
+      rgba(121, 223, 255, 0) 70%
+    ),
+    radial-gradient(circle at 95% 0, #d0f224 0, rgba(95, 213, 182, 0) 20%);
+}
