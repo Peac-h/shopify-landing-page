@@ -30,6 +30,10 @@ module.exports = {
         include: path.resolve(__dirname, "src"),
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
+      {
+        test: /\.(mov|mp4)$/,
+        use: "file-loader",
+      },
     ],
   },
   plugins: [
