@@ -1,42 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import { faqs } from "../data/pagesData";
 import { BtnExpand } from "../features/BtnExpand";
 
 const FaqItem = (props: {
   question: string;
   answer: Array<{ type: string; content?: string; items?: string[] }>;
-}) => (
-  <div className="grid grid-rows-[max-content_0fr] border-b pb-8 transition-all duration-[400ms] ease-[cubic-bezier(0.40,0.00,0.20,1.00)] md:pb-10">
-    <button
-      type="button"
-      className="justify-space-between flex place-items-center gap-x-2 text-left md:gap-x-4"
-    >
-      <h3 className="regular-heading max-w-xl pb-2 md:max-w-2xl md:pb-4 lg:max-w-3xl">
-        {props.question}
-      </h3>
-      <div className="ml-auto">
-        <BtnExpand />
-      </div>
-    </button>
+}) => {
+  const [isHidden, setIsHidden] = useState(true);
 
-    <div className="md:mr-sm max-w-xl overflow-hidden pr-8 opacity-100 transition-opacity delay-200 duration-[400ms] ease-[cubic-bezier(0.40,0.00,0.20,1.00)] md:max-w-2xl md:pr-11 lg:max-w-3xl">
-      <div className="regular-paragraph group pt-2 md:pt-4">
-        {props.answer.map((part, index) =>
-          part.type === "paragraph" ? (
-            <p key={index}>{part.content}</p>
-          ) : part.type === "list" ? (
-            <ul key={index}>
-              {part.items?.map((item, itemIndex) => (
-                <li key={itemIndex}>{item}</li>
-              ))}
-              <br />
-            </ul>
-          ) : null,
-        )}
+  return (
+    <div
+      className={`border-b pb-8 transition-all duration-[400ms] ease-[cubic-bezier(0.40,0.00,0.20,1.00)] md:pb-10 ${
+        isHidden
+          ? "grid grid-rows-[max-content_0fr]"
+          : "grid grid-rows-[max-content_1fr]"
+      } `}
+    >
+      <button
+        type="button"
+        className="justify-space-between flex place-items-center gap-x-2 text-left md:gap-x-4"
+        onClick={() => setIsHidden((h) => !h)}
+      >
+        <h3 className="regular-heading max-w-xl pb-2 md:max-w-2xl md:pb-4 lg:max-w-3xl">
+          {props.question}
+        </h3>
+        <div className="ml-auto">{<BtnExpand isHidden={isHidden} />}</div>
+      </button>
+
+      <div
+        className={`md:mr-sm max-w-xl overflow-hidden pr-8 duration-[400ms] ease-[cubic-bezier(0.40,0.00,0.20,1.00)] md:max-w-2xl md:pr-11 lg:max-w-3xl ${
+          isHidden ? "opacity-0 delay-0" : "opacity-100 delay-200"
+        } `}
+      >
+        <div className="regular-paragraph group pt-2 md:pt-4">
+          {props.answer.map((part, index) =>
+            part.type === "paragraph" ? (
+              <p key={index}>{part.content}</p>
+            ) : part.type === "list" ? (
+              <ul key={index}>
+                {part.items?.map((item, itemIndex) => (
+                  <li key={itemIndex}>{item}</li>
+                ))}
+                <br />
+              </ul>
+            ) : null,
+          )}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export const FaqSection = (): JSX.Element => (
   <section className="grid gap-y-10 bg-col-mint-cream pb-10 pt-20 md:gap-y-16 md:pb-16 md:pt-32">
