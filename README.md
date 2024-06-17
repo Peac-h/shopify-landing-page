@@ -13,11 +13,11 @@ The page is fully responsive, mirroring the adaptability of the original Shopify
 
 [Link to Page](https://shopify-clone-by-peach.netlify.app/)
 
-![Shopify Marketing Page - Desktop-top]()
+![Shopify Marketing Page - Desktop-top](https://raw.githubusercontent.com/Peac-h/shopify-landing-page/main/screenshot_desktop_top.png)
 
-![Shopify Marketing Page - Desktop-middle]()
+![Shopify Marketing Page - Desktop-middle](https://raw.githubusercontent.com/Peac-h/shopify-landing-page/main/screenshot_desktop_middle.png)
 
-![Shopify Marketing Page - Desktop-bottom]()
+![Shopify Marketing Page - Desktop-bottom](https://raw.githubusercontent.com/Peac-h/shopify-landing-page/main/screenshot_desktop_bottom.png)
 
 ## Author
 
