@@ -3,7 +3,7 @@
 This project is a clone of a [Shopify Marketing Page](https://www.shopify.com/free-trial?term=shopify&adid=699117274727&campaignid=21270911700&branded_enterprise=1&BOID=brand&utm_medium=cpc&utm_source=google&gad_source=1&gclid=Cj0KCQjwvb-zBhCmARIsAAfUI2s8L0lHnYr8tErd2m2x9oBG-JSxsxhSW5HxQAZ9tqTF7byRSfBLLlUaAmwoEALw_wcB&cmadid=516752332;cmadvertiserid=10730501;cmcampaignid=26990768;cmplacementid=324494362;cmcreativeid=163722649;cmsiteid=5500011), developed with:
 
 - **Tailwind CSS** Utilized for styling.
-- **TypeScript** TypeScript is employed for scripting.
+- **TypeScript** is employed for scripting.
 - **React** Chosen as the front-end framework.
 - **Webpack** Integrated as the build tool.
 
